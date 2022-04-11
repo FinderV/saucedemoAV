@@ -3,12 +3,18 @@ package org.tms.test;
 import java.util.Collections;
 import java.util.List;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.tms.service.InventoryPageService;
 
-public class InventoryPageFilterTest {
+public class InventoryPageFilterTest extends BaseTest {
 
-  private InventoryPageService inventoryPageService = new InventoryPageService();
+  private InventoryPageService inventoryPageService;
+
+  @BeforeClass
+  public void setUp() {
+    inventoryPageService = new InventoryPageService();
+  }
 
   @Test
   public void sortByPriceTest() {

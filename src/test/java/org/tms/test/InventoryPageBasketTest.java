@@ -1,13 +1,19 @@
 package org.tms.test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.tms.service.InventoryPageService;
 
 public class InventoryPageBasketTest extends BaseTest {
 
   private static int firstItem = 0;
-  private InventoryPageService inventoryPageService = new InventoryPageService();
+  private InventoryPageService inventoryPageService;
+
+  @BeforeClass
+  public void setUp() {
+    inventoryPageService = new InventoryPageService();
+  }
 
   @Test
   public void addToCartTest () {
