@@ -16,7 +16,7 @@ public class Waiter {
   }
 
   public static void waitForElementToBeClickable(WebElement element) {
-    new FluentWait<>(DriverSingleton.getDriver()).withTimeout(Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
+    new FluentWait<>(DriverSingleton.getInstance().getDriver()).withTimeout(Duration.ofSeconds(WAIT_TIMEOUT_SECONDS))
         .pollingEvery(Duration.ofMillis(TIMEOUT_SECONDS)).ignoring(NoSuchElementException.class)
         .until((ExpectedCondition<Boolean>) webDriver -> element.isDisplayed() && element
             .isEnabled());

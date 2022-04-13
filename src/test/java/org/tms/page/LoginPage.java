@@ -1,11 +1,7 @@
 package org.tms.page;
 
-import java.time.Duration;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.tms.utils.Waiter;
 
 public class LoginPage extends Page {
 
