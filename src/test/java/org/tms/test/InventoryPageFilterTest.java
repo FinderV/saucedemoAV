@@ -1,5 +1,9 @@
 package org.tms.test;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Issue;
+import io.qameta.allure.Link;
+import io.qameta.allure.TmsLink;
 import java.util.Collections;
 import java.util.List;
 import org.testng.Assert;
@@ -16,7 +20,12 @@ public class InventoryPageFilterTest extends BaseTest {
     inventoryPageService = new InventoryPageService();
   }
 
-  @Test
+
+  @Test(description = "Sorting by price")
+  @Description("Sorting by price on Inventory Page")
+  @Link("https://github.com/Alexandr-Sirotkin")
+  @Issue("Alexandr-Sirotkin")
+  @TmsLink("Alexandr-Sirotkin")
   public void sortByPriceTest() {
     inventoryPageService.login();
     List<Double> expectedList = inventoryPageService.getItemPrice();

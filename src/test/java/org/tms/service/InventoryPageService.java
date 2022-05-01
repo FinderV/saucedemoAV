@@ -1,5 +1,6 @@
 package org.tms.service;
 
+import io.qameta.allure.Step;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.support.ui.Select;
@@ -37,6 +38,7 @@ public class InventoryPageService {
    return priceList;
   }
 
+  @Step("Sort by price")
   public void sortByPrice() {
     Select select = new Select(inventoryPage.getFilterSelect());
     select.selectByVisibleText("Price (low to high)");
