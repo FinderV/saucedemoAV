@@ -2,6 +2,8 @@ package org.tms.model;
 
 public class User {
 
+  //это тестовые креды для всех пользователей, указанные разработчиками на самом сайте https://www.saucedemo.com/
+  
   private String name = "standard_user";
   private String password = "secret_sauce";
 
